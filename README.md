@@ -9,13 +9,13 @@ Provides an object (Location) that is used to retrieve coordinates / speed / etc
 
 **How to use:**
 
-    **To get a new coordinate(s)** - these functions retrieve coordinates from geolocation and store them, reactively, and in local storage automatically, they also have callbacks so you can
+    To get a new coordinate(s) - these functions retrieve coordinates from geolocation and store them, reactively, and in local storage automatically, they also have callbacks so you can
 
     Location.locate(function(pos))
     Location.startWatching(function(pos))
     Location.stopWatching(function(pos))
 
-    **To retrieve coordinates** --
+    To retrieve coordinates --
 
     Location.getReactivePosition -- Reactive
     Location.getLastPosition -- Non-Reactive but Persistent (Local Storage)
