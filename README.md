@@ -14,7 +14,7 @@ To get a new coordinate(s) - these functions retrieve coordinates from geolocati
 **Location.locate**  -- Retrieves a single GPS coordinate upon call
 
    * Location.locate(function(pos))
-   * 
+   
 **Location.startWatching** -- Continually pings the GPS for new positions, stores in local, and reactive var
 
    * Location.startWatching(function(pos))
@@ -25,9 +25,9 @@ To get a new coordinate(s) - these functions retrieve coordinates from geolocati
 
  To retrieve coordinates --
  
-   **Location.getReactivePosition()** -- Retrieves a reactive variable that updates from locate and startWatching
+ **Location.getReactivePosition()** -- Retrieves a reactive variable that updates from locate and startWatching
    
-   **Location.getLastPosition()** -- Retrieves non-reactive but Persistent (Local Storage)
+ **Location.getLastPosition()** -- Retrieves non-reactive but Persistent (Local Storage)
 
     Both return object of :
     
