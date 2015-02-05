@@ -1,13 +1,13 @@
 Package.describe({
     name: 'mirrorcell:geolocation-plus',
-    version: '0.0.1',
+    version: '1.0.3',
     // Brief, one-line summary of the package.
-    summary: 'A geolocation package that goes far beyond meteors core geolocation package',
+    summary: 'A Geolocation Package with Manual Stop / Start Watch events',
     // URL to the Git repository containing the source code for this package.
-    git: '',
+    git: 'https://github.com/pmwisdom/mirrorcell-geolocation-plus',
     // By default, Meteor will default to using README.md for documentation.
     // To avoid submitting documentation, set this field to null.
-    documentation: 'README.md'
+    documentation: ''
 });
 
 Cordova.depends({
