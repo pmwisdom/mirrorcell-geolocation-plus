@@ -39,7 +39,7 @@ Location.stopWatching(function(pos){
    
 **Location.getLastPosition()** -- Retrieves the stored non-reactive but Persistent (Local Storage)
 
-    Both return object of :
+Both return object of :
 
 ````javascript
 var pos = {
@@ -63,6 +63,9 @@ var pos = {
    Filters any GPS coordinate retrieved from the GPS by time (in minutes). For example, if you change Locate.timeFilter.lapse to 1, any GPS coordinates not 1 minute or longer from the last coordinate retrieved will not be returned or saved.
 
 You can use any of these filters in conjunction. To enable any or all of these:
-Location.distanceFilter.enabled = true;
-Location.accuracyFilter.enabled = true;
-Location.timeFilter.enabled = true;
+
+*Location.distanceFilter.enabled = true;
+
+*Location.accuracyFilter.enabled = true;
+
+*Location.timeFilter.enabled = true;
