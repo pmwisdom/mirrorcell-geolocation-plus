@@ -1,8 +1,8 @@
 Package.describe({
     name: 'mirrorcell:geolocation-plus',
-    version: '1.0.3',
+    version: '1.0.5',
     // Brief, one-line summary of the package.
-    summary: 'A Geolocation Package with Manual Stop / Start Watch events',
+    summary: 'A Geolocation Package with Manual Stop / Start Watch events and location storage',
     // URL to the Git repository containing the source code for this package.
     git: 'https://github.com/pmwisdom/mirrorcell-geolocation-plus',
     // By default, Meteor will default to using README.md for documentation.
