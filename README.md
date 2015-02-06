@@ -64,8 +64,8 @@ var pos = {
 
 You can use any of these filters in conjunction. To enable any or all of these:
 
-*Location.distanceFilter.enabled = true;
+   * Location.distanceFilter.enabled = true;
 
-*Location.accuracyFilter.enabled = true;
+   * Location.accuracyFilter.enabled = true;
 
-*Location.timeFilter.enabled = true;
+   * Location.timeFilter.enabled = true;
