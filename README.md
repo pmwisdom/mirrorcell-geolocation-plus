@@ -1,4 +1,4 @@
-Provides an object (Location) that is used to retrieve coordinates / speed / etc from browsers and mobile devices.
+Provides an abstraction (Location) from navigator.geolocation that is used to retrieve coordinates / speed / etc from browsers and mobile devices.
 
 **Advantages of this package over meteor's core package:**
 
