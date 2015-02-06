@@ -1,18 +1,20 @@
 Provides an abstraction (Location) from navigator.geolocation that is used to retrieve coordinates / speed / etc from browsers and mobile devices.
 
-**Advantages of this package over meteor's core package:**
+###### Advantages of this package over meteor's core package:
 
     * Provides reactive and non reactive options to retrieve position
     * Manually stop and start watching positions (original watches continuously, horrible for battery)
     * Manually get a one time position
     * Options to automatically filter for distance between points, time between locations, and gps accuracy
 
-**How to use:**
+###### How to use:
 
-**To get a new coordinate(s)** - these functions retrieve coordinates from the gps and store the results, reactively, and in local storage automatically, they also return callbacks so you can add your own custom logic / processing.
+###### To get a new coordinate(s)
+    * these functions retrieve coordinates from the gps and store the results, reactively, and in local storage automatically, they also return callbacks so you can add your own custom logic / processing.
    
    
-**Location.locate**  -- Gets a single GPS coordinate upon call
+###### Location.locate
+    * Gets a single GPS coordinate upon call
 
 ````
 Location.locate(function(pos){
