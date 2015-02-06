@@ -1,4 +1,4 @@
-Provides an abstraction (Location) from navigator.geolocation that is used to retrieve coordinates / speed / etc from browsers and mobile devices.
+## Provides an abstraction (Location) from navigator.geolocation that is used to retrieve coordinates / speed / etc from browsers and mobile devices.
 
 ###### Advantages of this package over meteor's core package:
 
@@ -35,11 +35,13 @@ Location.stopWatching(function(pos){
 });
 ````
 
-**To retrieve coordinates --**
+###### To retrieve coordinates --
  
-**Location.getReactivePosition()** -- Retrieves a reactive variable that updates from locate and startWatching
+######Location.getReactivePosition()
+    * Retrieves a reactive variable that updates from locate and startWatching
    
-**Location.getLastPosition()** -- Retrieves the stored non-reactive but Persistent (Local Storage)
+######Location.getLastPosition()
+    * Retrieves the stored non-reactive but Persistent (Local Storage)
 
 Both return object of :
 
@@ -56,7 +58,7 @@ var pos = {
 ````
 
 
-**Filtering:**
+######Filtering:
 * Distance: 
    Filters any GPS coordinate retreived from the GPS by distance. For example, if you change Locate.distanceFilter.range to 5, any GPS coordinates not 5 meters from the last coordiante retrieved will not be returned or saved.
 * Accuracy:
