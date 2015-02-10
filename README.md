@@ -68,8 +68,10 @@ var pos = {
 
 You can use any of these filters in conjunction. To enable any or all of these:
 
-   * Location.distanceFilter.enabled = true;
+   * enableAccuracyFilter(rating)
 
-   * Location.accuracyFilter.enabled = true;
+   * enableDistanceFilter(distance)
 
-   * Location.timeFilter.enabled = true;
+   * enableTimeFilter(span)
+
+You can disable any of these by calling their specific disable function or disableAllFilters()
