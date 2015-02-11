@@ -37,10 +37,10 @@ Location.stopWatching(function(pos){
 
 ###### To retrieve coordinates --
  
-######Location.getReactivePosition()
+###### Location.getReactivePosition()
     * Retrieves a reactive variable that updates from locate and startWatching
    
-######Location.getLastPosition()
+###### Location.getLastPosition()
     * Retrieves the stored non-reactive but Persistent (Local Storage)
 
 Both return object of :
@@ -58,7 +58,7 @@ var pos = {
 ````
 
 
-######Filtering:
+###### Filtering:
 * Distance: 
    Filters any GPS coordinate retreived from the GPS by distance. For example, if you change Locate.distanceFilter.range to 5, any GPS coordinates not 5 meters from the last coordiante retrieved will not be returned or saved.
 * Accuracy:
@@ -75,3 +75,8 @@ You can use any of these filters in conjunction. To enable any or all of these:
    * enableTimeFilter(span)
 
 You can disable any of these by calling their specific disable function or disableAllFilters()
+
+###### Setting GPS options
+
+* setWatchOptions(optionsObject) -- Sets the options for Location.watchPosition ( see docs for navigator.geolocation.watchPosition for options)
+* setGetPositionOptions(optionsObject) -- Sets the options for Location.locate ( see docs for navigator.geolocation.getCurrentPosition for options)
