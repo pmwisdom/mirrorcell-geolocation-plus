@@ -31,8 +31,7 @@ Location.startWatching(function(pos){
 **Location.stopWatching** -- Stops the currently running watcher
 
 ````
-Location.stopWatching(function(pos){
-});
+Location.stopWatching();
 ````
 
 ###### To retrieve coordinates --
