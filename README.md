@@ -1,19 +1,19 @@
 ## Provides an abstraction (Location) from navigator.geolocation that is used to retrieve coordinates / speed / etc from browsers and mobile devices.
 
-###### Advantages of this package over meteor's core package:
+### Advantages of this package over meteor's core package:
 
     * Provides reactive and non reactive options to retrieve position
     * Manually stop and start watching positions (original watches continuously, horrible for battery)
     * Manually get a one time position
     * Options to automatically filter for distance between points, time between locations, and gps accuracy
 
-###### How to use:
+### How to use:
 
-###### To get a new coordinate(s)
+### To get a new coordinate(s)
     * these functions retrieve coordinates from the gps and store the results, reactively, and in local storage automatically, they also return callbacks so you can add your own custom logic / processing.
    
    
-###### Location.locate
+### Location.locate
     * Gets a single GPS coordinate upon call
 
 ````
@@ -35,12 +35,12 @@ Location.stopWatching(function(pos){
 });
 ````
 
-###### To retrieve coordinates --
+### To retrieve coordinates --
  
-###### Location.getReactivePosition()
+### Location.getReactivePosition()
     * Retrieves a reactive variable that updates from locate and startWatching
    
-###### Location.getLastPosition()
+### Location.getLastPosition()
     * Retrieves the stored non-reactive but Persistent (Local Storage)
 
 Both return object of :
@@ -58,7 +58,7 @@ var pos = {
 ````
 
 
-###### Filtering:
+### Filtering:
 * Distance: 
    Filters any GPS coordinate retreived from the GPS by distance. For example, if you change Locate.distanceFilter.range to 5, any GPS coordinates not 5 meters from the last coordiante retrieved will not be returned or saved.
 * Accuracy:
@@ -68,15 +68,18 @@ var pos = {
 
 You can use any of these filters in conjunction. To enable any or all of these:
 
-   * enableAccuracyFilter(rating)
+   * Location.enableAccuracyFilter(rating)
 
-   * enableDistanceFilter(distance)
+   * Location.enableDistanceFilter(distance)
 
-   * enableTimeFilter(span)
+   * Location.enableTimeFilter(span)
 
-You can disable any of these by calling their specific disable function or disableAllFilters()
+You can disable any of these by calling their specific disable function or Location.disableAllFilters()
 
-###### Setting GPS options
+### Setting GPS options
 
 * setWatchOptions(optionsObject) -- Sets the options for Location.watchPosition ( see docs for navigator.geolocation.watchPosition for options)
 * setGetPositionOptions(optionsObject) -- Sets the options for Location.locate ( see docs for navigator.geolocation.getCurrentPosition for options)
+
+### Debug -
+To Turn on debugging console message: Set Location.debug = true
