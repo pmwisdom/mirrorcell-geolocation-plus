@@ -9,32 +9,49 @@
 
 ### How to use:
 
-### To get a new coordinate(s)
-    * these functions retrieve coordinates from the gps and store the results, reactively, and in local storage automatically, they also return callbacks so you can add your own custom logic / processing.
+**To get a new coordinate(s)** - these functions retrieve coordinates from the gps and store the results, reactively, and in local storage automatically, they also return callbacks so you can add your own custom logic / processing.
    
-   
-### Location.locate
-    * Gets a single GPS coordinate upon call
+**Location.locate** - Gets a single GPS coordinate upon call
 
-````
+````javascript
 Location.locate(function(pos){
+   console.log("Got a position!", pos);
+}, function(err){
+   console.log("Oops! There was an error", err);
 });
 ````
    
-**Location.startWatching** -- Continually pings the GPS for new positions, stores in local, and the reactive var
+**Location.startWatching** -- Continually pings the GPS for new positions, stores in local storage, and the reactive var
 
-````
+````javascript
 Location.startWatching(function(pos){
+   console.log("Got a position!", pos);
+}, function(err){
+   console.log("Oops! There was an error", err);
 });
 ````
    
 **Location.stopWatching** -- Stops the currently running watcher
 
-````
+````javascript
 Location.stopWatching();
 ````
 
-### To retrieve coordinates --
+**Location.setMockPosition** -- Sets a Mock (test) position. Useful for testing in the browser. you can set any combination of the fields, none are required. Each field's default is 0. Will update the local storage and reactive position object. 
+
+````javascript
+Location.setMockPosition({
+   latitude : ...
+   longitude : ...
+   accuracy : ...
+   speed : ...
+   altitude : ...
+   altitudeAccuracy : ...
+   updatedAt : ...
+});
+````
+
+**To retrieve coordinates** --
  
 ### Location.getReactivePosition()
     * Retrieves a reactive variable that updates from locate and startWatching
