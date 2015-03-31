@@ -1,6 +1,6 @@
 Package.describe({
     name: 'mirrorcell:geolocation-plus',
-    version: '1.1.0',
+    version: '1.1.1',
     // Brief, one-line summary of the package.
     summary: 'A Geolocation Abstraction with Manual Starting / Stopping and location storage',
     // URL to the Git repository containing the source code for this package.
@@ -11,11 +11,12 @@ Package.describe({
 });
 
 Cordova.depends({
-    "org.apache.cordova.geolocation": "0.3.11"
+    "org.apache.cordova.geolocation": "0.3.11",
+    "org.flybuy.nativeutils": "0.0.2"
 });
 
 Package.onUse(function(api) {
-  api.versionsFrom('1.0.3.1');
+    api.versionsFrom('1.0.3.1');
 
     api.use(['session', 'reactive-var']);
 
