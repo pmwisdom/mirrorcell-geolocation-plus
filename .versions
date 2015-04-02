@@ -1,11 +1,11 @@
 base64@1.0.3
 ejson@1.0.6
 json@1.0.3
-local-test:mirrorcell:geolocation-plus@1.1.1
-meteor@1.1.5
-mirrorcell:geolocation-plus@1.1.1
+local-test:mirrorcell:geolocation-plus@1.1.2
+meteor@1.1.6
+mirrorcell:geolocation-plus@1.1.2
 reactive-dict@1.1.0
 reactive-var@1.0.5
 session@1.1.0
-tracker@1.0.6
+tracker@1.0.7
 underscore@1.0.3
