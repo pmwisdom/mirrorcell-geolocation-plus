@@ -37,7 +37,7 @@ Location.startWatching(function(pos){
 Location.stopWatching();
 ````
 
-**Location.setMockPosition** -- Sets a Mock (test) position. Useful for testing in the browser. you can set any combination of the fields, none are required. Each field's default is 0. Will update the local storage and reactive position object. 
+**Location.setMockLocation** -- Sets a Mock (test) position. Useful for testing in the browser. you can set any combination of the fields, none are required. Each field's default is 0. Will update the local storage and reactive position object. 
 
 ````javascript
 Location.setMockPosition({
