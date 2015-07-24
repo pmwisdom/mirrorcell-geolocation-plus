@@ -12,7 +12,7 @@ Package.describe({
 
 Cordova.depends({
     "org.apache.cordova.geolocation": "0.3.11",
-    "org.flybuy.nativeutils": "0.0.2"
+    "org.flybuy.nativeutils": "https://github.com/pmwisdom/NativeUtils/tarball/64460ce4e28a346245beb2c5a7413bd67a6c148d"
 });
 
 Package.onUse(function(api) {
