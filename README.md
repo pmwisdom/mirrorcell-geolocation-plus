@@ -76,7 +76,7 @@ var pos = {
     }
 ````
 
-** To retrieve the status of the GPS:
+**To retrieve the status of the GPS:**
 
 **Location.getGPSState** 
 ````javascript
