@@ -1,6 +1,6 @@
 Package.describe({
     name: 'mirrorcell:geolocation-plus',
-    version: '1.1.2',
+    version: '1.1.3',
     // Brief, one-line summary of the package.
     summary: 'A Geolocation Abstraction with Manual Starting / Stopping and location storage',
     // URL to the Git repository containing the source code for this package.
