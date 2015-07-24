@@ -1,7 +1,7 @@
 ## Provides an abstraction (Location) from navigator.geolocation that is used to retrieve coordinates / speed / etc from browsers and mobile devices.
 
 ### Advantages of this package over meteor's core package:
-    * NEW - Get the GPS Status Natively, And Show a Native Dialog -- Cordova Only
+    * NEW - Get the GPS Status / Show Dialog  Natively.
     * Provides reactive and non reactive options to retrieve position
     * Manually stop and start watching positions (original watches continuously, horrible for battery)
     * Manually get a one time position
