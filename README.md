@@ -1,14 +1,59 @@
 ## Provides an abstraction (Location) from navigator.geolocation that is used to retrieve coordinates / speed / etc from browsers and mobile devices.
 
-#New For 1.1.3!
-* Get The GPS Status Of Android / iOS and display a native prompt if GPS is Disabled That Takes the User to relevant settings pages -- Please look at the documentation at the bottom for an example.
-
 ### Advantages of this package over meteor's core package:
-
+    * NEW - Get the GPS Status Natively, And Show a Native Dialog -- Cordova Only
     * Provides reactive and non reactive options to retrieve position
     * Manually stop and start watching positions (original watches continuously, horrible for battery)
     * Manually get a one time position
     * Options to automatically filter for distance between points, time between locations, and gps accuracy
+
+
+#New For 1.1.3!
+* Get The GPS Status Of Android / iOS and display a native prompt if GPS is Disabled That Takes the User to relevant settings pages -- Please look at the documentation below for an example.
+
+**To retrieve the status of the GPS:**
+
+**Location.getGPSState** 
+````javascript
+//Success Will fire upon completion of the GPS check
+//State will be different for Android and iOS
+
+//Android States:
+//Enabled
+//Disabled
+
+//iOS States: (See IOS KClAuthorizationStatus Documentation for more information)
+//NotDetermined -- Never asked user for auhtorization
+//Denied -- Asked User for authorization but they denied
+//Restricted -- Same As Not Determined
+
+function success(state) {
+   if(state === 'Enabled') {
+      console.log("GPS Is Enabled");
+   }
+}
+
+//This will fire if either your not running in a cordova application
+//Or the plugin was not found for some reason
+function failure() {
+   console.log("Failed to get the GPS State");
+}
+
+//Options: The only option right now is to show 
+//a dialog if gps is disabled. The dialog has a 
+//button on it that directs the user to the settings
+//page assocaited with enabling their gps for your app.
+// Dialog : true means the pop up will appear
+var options = {
+   dialog: true
+}
+
+Location.getGPSState(success, failure, options);
+````
+Pictures Of said gps dialog:
+
+
+![alt text](http://i.imgur.com/XGiF1zfl.png) ![alt text](http://i.imgur.com/zcgT1L9l.png)
 
 ### How to use:
 
@@ -75,47 +120,6 @@ var pos = {
         updatedAt : ...
     }
 ````
-
-**To retrieve the status of the GPS:**
-
-**Location.getGPSState** 
-````javascript
-//Success Will fire upon completion of the GPS check
-//State will be different for Android and iOS
-
-//Android States:
-//Enabled
-//Disabled
-
-//iOS States: (See IOS KClAuthorizationStatus Documentation for more information)
-//NotDetermined -- Never asked user for auhtorization
-//Denied -- Asked User for authorization but they denied
-//Restricted -- Same As Not Determined
-
-function success(state) {
-   if(state === 'Enabled') {
-      console.log("GPS Is Enabled");
-   }
-}
-
-//This will fire if either your not running in a cordova application
-//Or the plugin was not found for some reason
-function failure() {
-   console.log("Failed to get the GPS State");
-}
-
-//Options: The only option right now is to show 
-//a dialog if gps is disabled. The dialog has a 
-//button on it that directs the user to the settings
-//page assocaited with enabling their gps for your app.
-// Dialog : true means the pop up will appear
-var options = {
-   dialog: true
-}
-
-Location.getGPSState(success, failure, options);
-````
-
 
 ### Filtering:
 * Distance: 
