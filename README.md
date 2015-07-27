@@ -1,4 +1,8 @@
-## Provides an abstraction (Location) from navigator.geolocation that is used to retrieve coordinates / speed / etc from browsers and mobile devices.
+## Provides an abstraction (Location) from navigator.geolocation that is used to retrieve coordinates / speed / etc from browsers and mobile devices. ##
+
+##New For 1.1.3!
+* Get The GPS Status Of Android / iOS and display a native prompt if GPS is Disabled That Takes the User to relevant settings pages -- Please look at the documentation below for an example.
+
 
 ### Advantages of this package over meteor's core package:
     * NEW - Get the GPS Status / Show Dialog  Natively.
@@ -7,9 +11,6 @@
     * Manually get a one time position
     * Options to automatically filter for distance between points, time between locations, and gps accuracy
 
-
-#New For 1.1.3!
-* Get The GPS Status Of Android / iOS and display a native prompt if GPS is Disabled That Takes the User to relevant settings pages -- Please look at the documentation below for an example.
 
 **To retrieve the status of the GPS:**
 
