@@ -2,7 +2,7 @@
 
 #### NOTE : This plugin is for *foreground* Geolocation, if you need *background* geolocation, use: [mirrorcell:background-geolocation-plus](https://atmospherejs.com/mirrorcell/background-geolocation-plus)
 
-##New For 1.1.3!
+#### New For 1.1.3!
 * Get The GPS Status Of Android / iOS and display a native prompt if GPS is Disabled That Takes the User to relevant settings pages -- Please look at the documentation below for an example.
 
 
